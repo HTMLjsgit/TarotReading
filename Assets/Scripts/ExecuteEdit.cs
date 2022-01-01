@@ -19,11 +19,8 @@ public class ExecuteEdit : MonoBehaviour
             foreach(Transform t in TarotCards.transform){
                 TarotScript tarot_script = t.GetComponent<TarotScript>();
                 if(tarot_script != null){
-                    if(tarot_script.TarotTitle.Contains(":")){
-                        Debug.Log("それ:ついている " + t.gameObject.name);
-                    }
-                    if(!tarot_script.TarotCardSprite.ToString().Contains(tarot_script.TarotTitle)){
-                        Debug.Log("画像違うで" + t.gameObject);
+                    if(tarot_script.TarotResultSentence.Contains("test")){
+                        Debug.Log(t.gameObject.name);
                     }
                 }
             }
